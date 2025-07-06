@@ -1,0 +1,24 @@
+# version: '3.8'
+
+services:
+
+  postgres_Crypto:
+    image: postgres:latest
+    container_name: postgres-crypto
+    environment:
+      POSTGRES_PASSWORD: ZNEB0706
+      POSTGRES_USER: werapat
+      POSTGRES_DB: Crypto
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-crypto-data:/var/lib/postgresql/data
+    # networks:
+    #   - app-network
+
+volumes:
+  postgres-crypto-data: {}
+
+# networks:
+#   app-network:
+#     external: true
