@@ -1,5 +1,3 @@
-# version: '3.8'
-
 services:
 
   postgres_Crypto:
@@ -13,12 +11,6 @@ services:
       - "5432:5432"
     volumes:
       - postgres-crypto-data:/var/lib/postgresql/data
-    # networks:
-    #   - app-network
 
 volumes:
   postgres-crypto-data: {}
-
-# networks:
-#   app-network:
-#     external: true

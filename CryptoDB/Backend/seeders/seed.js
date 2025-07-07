@@ -22,7 +22,7 @@ const seed = async () => {
 
     for (const asset of assets) {
         await Wallet.create({
-            user_id: user.id,      // ตรงกับชื่อ column ใน model/DB
+            user_id: user.id,
             asset_code: asset.code,
             balance: 0,
             available_balance: 0,

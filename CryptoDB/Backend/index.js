@@ -4,17 +4,14 @@ const app = express();
 const sequelize = require('./utils/db');
 const userRoutes = require('./routes/userRoutes');
 
-// Middleware
 app.use(express.json());
 
-// Routes
 app.use('/users', userRoutes);
 
-// Connect DB and start server
 sequelize.authenticate()
   .then(() => {
     console.log('Database connected ✅');
-    return sequelize.sync(); // อาจใช้ { force: true } สำหรับ dev เท่านั้น
+    return sequelize.sync();
   })
   .then(() => {
     app.listen(process.env.PORT || 3000, () => {
