@@ -1,0 +1,73 @@
+# Crypto
+
+A simple backend system for cryptocurrency exchange built with **Node.js**, **Express**, and **Sequelize** (PostgreSQL).
+
+# Features
+
+- User management (register, verify, KYC status)
+- Wallet system for holding balances of various assets
+- Supported assets: BTC, ETH, XRP, DOGE
+- Internal transfers between users
+- Buy/sell orders (limit order structure)
+- Asset transaction logs (deposits, withdrawals, trade logs)
+- Sequelize ORM with PostgreSQL support
+
+## Project Structure
+
+Crypto/
+- CryptoDB/
+ - Backend/
+  - config/
+  - controllers/
+  - migrations/
+  - models/
+  - node_modules/
+  - routes/
+  - seeders/
+  - Test/
+  - utils/
+  - .env
+  - index.js
+  - package.json
+  - package-lock.json
+ - docker-compose.yml # Docker setup database
+- .gitignore
+- ReadME
+
+## Getting Started
+### 1. Clone the repository
+
+bash
+git clone https://github.com/Werapat-rtn/Crypto.git
+cd CryptoDB
+
+### 2. docker-compose
+bash
+docker-compose up -d
+
+### 3. Install dependencies
+bash
+npm install
+
+### 4. Configure .env
+.env
+DB_NAME=Crypto
+DB_USER=werapat
+DB_PASS=ZNEB0706
+DB_HOST=localhost
+PORT=3000
+
+### 5. Seed the Database
+bash
+node seeders/seed.js
+  
+  This will:
+   - Create mock data users
+   - Register 4 crypto assets: BTC, ETH, XRP, DOGE
+   - Create wallets linked to the user
+
+### 6. Run The Server and Test api
+bash
+npm run dev
+
+GET http://localhost:3000/users/1/wallets
