@@ -3,10 +3,14 @@ const express = require('express');
 const app = express();
 const sequelize = require('./utils/db');
 const userRoutes = require('./routes/userRoutes');
+const assetRoutes = require('./routes/assetRoutes');
+const walletRoutes = require('./routes/walletRoutes');
 
 app.use(express.json());
 
 app.use('/users', userRoutes);
+app.use('/assets', assetRoutes);
+app.use('/wallets', walletRoutes);
 
 sequelize.authenticate()
   .then(() => {

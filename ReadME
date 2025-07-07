@@ -70,4 +70,9 @@ node seeders/seed.js
 bash
 npm run dev
 
-GET http://localhost:3000/users/1/wallets
+GET http://localhost:3000/users
+GET http://localhost:3000/users/:id/wallets
+POST http://localhost:3000/users
+GET http://localhost:3000/wallets
+POST http://localhost:3000/wallets
+GET http://localhost:3000/assets
