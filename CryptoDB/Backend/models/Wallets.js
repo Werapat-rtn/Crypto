@@ -4,8 +4,6 @@ module.exports = (sequelize, DataTypes) => {
     balance: DataTypes.DECIMAL,
     available_balance: DataTypes.DECIMAL,
     frozen_balance: DataTypes.DECIMAL,
-    // user_id: DataTypes.INTEGER,
-    // asset_code: DataTypes.STRING
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false

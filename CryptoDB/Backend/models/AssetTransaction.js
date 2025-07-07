@@ -1,12 +1,9 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
     const AssetTransaction = sequelize.define('AssetTransaction', {
-        fromUserId: DataTypes.INTEGER,
-        toUserId: DataTypes.INTEGER,
-        assetCode: DataTypes.STRING,
+        tx_hash: DataTypes.STRING,
         amount: DataTypes.DECIMAL,
         type: DataTypes.ENUM('transfer', 'order_match', 'deposit', 'withdraw'),
-        orderId: DataTypes.INTEGER
     }, {
         freezeTableName: true,
         tableName: 'asset_transactions'

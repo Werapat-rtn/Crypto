@@ -1,8 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
     const Order = sequelize.define('Order', {
-        userId: DataTypes.INTEGER,
-        assetCode: DataTypes.STRING,
         type: DataTypes.ENUM('buy', 'sell'),
         amount: DataTypes.DECIMAL,
         price: DataTypes.DECIMAL,
