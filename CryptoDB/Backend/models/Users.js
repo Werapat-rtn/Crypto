@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password_hash: DataTypes.STRING,
     full_name: DataTypes.STRING,
-    kyc_status: DataTypes.STRING,
+    kyc_status: DataTypes.ENUM('pending', 'verified', 'rejected'),
     is_active: DataTypes.BOOLEAN
   }, {
     freezeTableName: true,

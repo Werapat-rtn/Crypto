@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.ENUM('buy', 'sell'),
         amount: DataTypes.DECIMAL,
         price: DataTypes.DECIMAL,
-        status: DataTypes.ENUM('open', 'matched', 'cancelled')
+        status: DataTypes.ENUM('open', 'filled', 'cancelled', 'partial')
     }, {
         freezeTableName: true,
         tableName: 'orders'

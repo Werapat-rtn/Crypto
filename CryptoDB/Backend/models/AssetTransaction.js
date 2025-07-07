@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     const AssetTransaction = sequelize.define('AssetTransaction', {
         tx_hash: DataTypes.STRING,
         amount: DataTypes.DECIMAL,
-        type: DataTypes.ENUM('transfer', 'order_match', 'deposit', 'withdraw'),
+        type: DataTypes.ENUM( 'deposit', 'withdraw', 'trade_buy', 'trade_sell', 'transfer_in', 'transfer_out' ),
     }, {
         freezeTableName: true,
         tableName: 'asset_transactions'

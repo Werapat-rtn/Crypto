@@ -16,7 +16,7 @@ const seed = async () => {
         email: 'test@example.com',
         password_hash: 'hashed_password',
         full_name: 'Test User',
-        kyc_status: 'approved',
+        kyc_status: 'verified',
         is_active: true
     });
 
